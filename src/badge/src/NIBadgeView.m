@@ -22,10 +22,10 @@
 #error "Nimbus requires ARC support."
 #endif
 
-static const CGFloat kMinimumWidth = 30.f;
+static const CGFloat kMinimumWidth = 10.f;
 static const CGFloat kHorizontalMargins = 20.f;
 static const CGFloat kVerticalMargins = 10.f;
-static const CGFloat kBadgeLineSize = 2.0f;
+static const CGFloat kBadgeLineSize = 0.0f;
 
 @implementation NIBadgeView
 
