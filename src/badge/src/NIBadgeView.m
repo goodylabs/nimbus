@@ -134,37 +134,37 @@ static const CGFloat kBadgeLineSize = 0.0f;
   CGContextRestoreGState(context);
 
   // Add the gloss effect
-  CGContextSaveGState(context);
-
-  CGContextBeginPath(context);
-  CGContextAddArc(context, maxX-kRadius, minY+kRadius, kRadius, pi+(pi/2), 0, 0);
-  CGContextAddArc(context, minX+kRadius, minY+kRadius, kRadius, pi, pi+pi/2, 0);
-  CGContextAddRect(context, CGRectMake(minX, minY + kRadius,
-                                       rect.size.width - kRadius + 1, CGRectGetMidY(rect) - kRadius));
-  CGContextClip(context);
-  
-  size_t num_locations = 2;
-  CGFloat locations[] = { 0.0f, 1.f };
-  CGFloat components[] = {
-    1.f, 1.f, 1.f, 0.8f,
-    1.f, 1.f, 1.f, 0.0f };
-
-  CGColorSpaceRef cspace;
-  CGGradientRef gradient;
-  cspace = CGColorSpaceCreateDeviceRGB();
-  gradient = CGGradientCreateWithColorComponents (cspace, components, locations, num_locations);
-  
-  CGPoint sPoint, ePoint;
-  sPoint.x = 0;
-  sPoint.y = 4;
-  ePoint.x = 0;
-  ePoint.y = CGRectGetMidY(rect) - 2;
-  CGContextDrawLinearGradient (context, gradient, sPoint, ePoint, 0);
-  
-  CGColorSpaceRelease(cspace);
-  CGGradientRelease(gradient);
-
-  CGContextRestoreGState(context);
+//  CGContextSaveGState(context);
+//
+//  CGContextBeginPath(context);
+//  CGContextAddArc(context, maxX-kRadius, minY+kRadius, kRadius, pi+(pi/2), 0, 0);
+//  CGContextAddArc(context, minX+kRadius, minY+kRadius, kRadius, pi, pi+pi/2, 0);
+//  CGContextAddRect(context, CGRectMake(minX, minY + kRadius,
+//                                       rect.size.width - kRadius + 1, CGRectGetMidY(rect) - kRadius));
+//  CGContextClip(context);
+//  
+//  size_t num_locations = 2;
+//  CGFloat locations[] = { 0.0f, 1.f };
+//  CGFloat components[] = {
+//    1.f, 1.f, 1.f, 0.8f,
+//    1.f, 1.f, 1.f, 0.0f };
+//
+//  CGColorSpaceRef cspace;
+//  CGGradientRef gradient;
+//  cspace = CGColorSpaceCreateDeviceRGB();
+//  gradient = CGGradientCreateWithColorComponents (cspace, components, locations, num_locations);
+//  
+//  CGPoint sPoint, ePoint;
+//  sPoint.x = 0;
+//  sPoint.y = 4;
+//  ePoint.x = 0;
+//  ePoint.y = CGRectGetMidY(rect) - 2;
+//  CGContextDrawLinearGradient (context, gradient, sPoint, ePoint, 0);
+//  
+//  CGColorSpaceRelease(cspace);
+//  CGGradientRelease(gradient);
+//
+//  CGContextRestoreGState(context);
 
   // Draw the border
   CGContextBeginPath(context);
