@@ -22,8 +22,8 @@
 #error "Nimbus requires ARC support."
 #endif
 
-static const CGFloat kMinimumWidth = 10.f;
-static const CGFloat kHorizontalMargins = 20.f;
+static const CGFloat kMinimumWidth = 13.f;
+static const CGFloat kHorizontalMargins = 10.f;
 static const CGFloat kVerticalMargins = 10.f;
 static const CGFloat kBadgeLineSize = 0.0f;
 
@@ -77,7 +77,7 @@ static const CGFloat kBadgeLineSize = 0.0f;
 - (CGSize)sizeThatFits:(CGSize)size {
   CGSize stringSize = [self.text sizeWithFont:self.font];
 
-  return CGSizeMake(MAX(kMinimumWidth, stringSize.width + kHorizontalMargins),
+  return CGSizeMake(MAX(kMinimumWidth + kHorizontalMargins, stringSize.width + kHorizontalMargins),
                     stringSize.height + kVerticalMargins);
 }
 
